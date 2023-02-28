@@ -1,0 +1,69 @@
+@use "./colors" as *;
+
+*,
+::before,
+::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+$headingFont: 'Archivo', 'Tilt Wrap', 'Tahoma';
+$altFont: 'Trebuchet Ms', 'Lucida Sans Unicode', 'Sitka', 'Segoe Ui';
+$qouteFont: 'Segoe Print', 'Sylfaen', 'Segoe Ui';
+$btnFont: 'Viga', 'Tahoma';
+
+body {
+    scroll-behavior: smooth;
+    caret-color: $mainColor;
+    font-size: 1rem;
+    font-family: $altFont;
+    text-transform: capitalize;
+    overflow-x: hidden;
+    accent-color: $mainColor;
+
+    button {
+        outline: none;
+    }
+
+    input[type="reset"] {
+        border: none;
+    }
+
+    input[type="submit"] {
+        border: none;
+    }
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headingFont;
+}
+
+::selection {
+    background-color: $mainColor ;
+    color: white
+}
+
+::placeholder {
+    color: lighten($lightGray, 10);
+    text-transform: capitalize;
+    font-family: $altFont;
+}

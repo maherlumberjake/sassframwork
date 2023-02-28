@@ -1,0 +1,266 @@
+@use "./globals" as *;
+@mixin boxSh($px,$blur,$spread,$color,$inset){
+    @if $inset == "false" {
+    box-shadow: #{$px+"px"} #{$px+"px"} #{$blur+"px"} #{$spread+"px"} $color,
+    #{-$px+"px"} #{-$px+"px"} #{$blur+"px"} #{$spread+"px"} $color;}
+    @else {
+        box-shadow:    #{$px+"px"} #{$px+"px"} #{$blur+"px"} #{$spread+"px"} $color,
+        #{-$px+"px"}   #{-$px+"px"}  #{$blur+"px"} #{$spread+"px"} $color,
+        #{$px+"px"}    #{$px+"px"} #{$blur+"px"} #{$spread+"px"} $color inset,
+        #{-$px+"px"}  #{-$px+"px"} #{$blur+"px"} #{$spread+"px"} $color inset;
+    ;
+    }
+}
+/// $px no need to write px in that numeric var
+/// $blur same as px (no need to write px )
+/// $spread same as px (no need to write px)
+///  $inset ? inset shadow as well : only external shadow 
+@mixin textSh($px,$blur,$color){
+        text-shadow: #{$px+"px"} #{$px+"px"} #{$blur+"px"} $color,#{-$px+"px"} #{-$px+"px"} #{$blur+"px"} $color;
+}
+
+@mixin psudo($width,$height,$pozX,$pozY){
+    position: absolute;
+    content: "";
+    width: $width;
+    height: $height;
+    top:  #{$pozY+"%"};
+    left: #{$pozX+"%"};
+    /// $width for psudo class (::before, ::after)
+    /// $height for psudo class (::before, ::after)
+    /// $pozX the left for psudo class (::before, ::after)
+    /// $pozY the top  for psudo class (::before, ::after)
+
+}
+/// basic ::before & ::after props
+@mixin basicFlex($dir,$justify,$align,$pad){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+    padding: $pad;
+
+}
+///basic flex box 
+
+@mixin basicGridContainer($minItemWidth,$gap,$width,$justify){
+    display: grid;
+    $minmax:#{"minmax(#{$minItemWidth},1fr)"};
+    gap: $gap;
+    width: $width;
+    min-height: auto;
+    justify-content: $justify;
+    grid-template-columns: repeat(auto-fit,#{$minmax});
+    margin:0px auto;
+  
+
+}
+///basic grid 
+@mixin btn($align,$padBl,$color){
+   cursor: pointer;
+   font-family: $btnFont;
+   text-align: center;
+   background-color: $color;
+   color: white;
+   width: fit-content;
+   text-transform: capitalize;
+   padding-block: $padBl / 6;
+   padding-inline: $padBl * 0.8;
+   border-radius: $padBl *2 / 10;
+   -webkit-border-radius: $padBl *2 / 10;
+   -moz-border-radius: $padBl *2 / 10;
+   -ms-border-radius: $padBl *2 / 10;
+   -o-border-radius: $padBl *2 / 10;
+   font-size: $padBl;
+   transition: 0.6s ease ;
+   -webkit-transition: 0.6s ease ;
+   -moz-transition: 0.6s ease ;
+   -ms-transition: 0.6s ease ;
+   -o-transition: 0.6s ease ;
+}
+///basic button
+@mixin basicFLexContainer($width,$gap){
+    width: $width;
+display: flex;
+gap: $gap;
+justify-content: center;
+margin: 0px auto;
+}
+@mixin basicFLexCard($titleAlign,$DesAndBtnCLassName){
+    display: flex;
+    flex-direction: column;
+    img{
+        width:100%;
+     }
+   h2,h3,h4,h5{
+        align-self: $titleAlign;
+    }
+    .#{$DesAndBtnCLassName}{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/// $titleAlign of the card
+/// $DesAndBtnCLassName :the name of the last div in card
+@mixin basicGridCard($paddding,$gap,$borderR){
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    padding: #{$paddding /2} $paddding ;
+    gap: $gap;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: "title title title title title"" img img img img img "" des . . . link ";   
+    border-radius: $borderR;
+    -webkit-border-radius: $borderR;
+    -moz-border-radius: $borderR;
+    -ms-border-radius: $borderR;
+    -o-border-radius: $borderR;
+    img{
+        grid-area: img;
+        width: 100%;
+    }
+    .btn,a{
+        grid-area: link;
+    }
+    p,pre{
+        grid-area: des;
+        text-align: center;
+    }
+    h2,h3,h4,h5,h6{
+        grid-area: title;
+        text-align: center;
+    }
+
+}
+@mixin spinner($width,$color){
+    
+.spinner{
+    width:$width;
+    height:$width;
+    border-radius: 50%;
+    background-color: transparent;
+    border: $width/100 *3 solid ;
+    border-color: $color $color $color transparent ;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: spinner 0.9s  infinite ease-in-out ;
+    -webkit-animation: spinner 0.9s  infinite ease-in-out ;
+}
+@keyframes spinner{
+    from{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}to{
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+}
+}
+
+}
+/// spinner animation its almost builtInClass just throw it on global
+/// dont forget to put spinner className on any html el to make it appear.
+@mixin searchScope($width,$offsetColor){
+.spincer{
+    width: $width;
+    margin: 0px auto;
+    height: $width ;
+    background-color: transparent;
+    animation: spincer 2s  infinite ease alternate;
+    -webkit-animation: spincer 2s  infinite ease alternate;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    @include boxSh(2,3,1.5,$offsetColor,"true");
+    .spincerAfter
+{
+        position: absolute;
+        inset: $width /4 ;
+        border-radius: inherit;
+        background-color: inherit;
+        -webkit-border-radius: inherit;
+        -moz-border-radius: inherit;
+        -ms-border-radius: inherit;
+        -o-border-radius: inherit;
+        animation: spincerAfter 2s  infinite alternate-reverse ease;
+        -webkit-animation: spincerAfter 2s  infinite alternate-reverse ease;
+        @include boxSh(2,3,1.5,$offsetColor,"true");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            width: 100%;
+            height: 2.5%;
+            background-color: $offsetColor;
+            position: relative;
+            animation:  rotate 1s alternate infinite ease-in-out;
+            -webkit-animation:  rotate 1s alternate infinite ease-in-out;
+            &::after{
+                inset: 0px;
+                position: absolute;
+                content: '';
+                background-color: inherit;
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);}}}}
+@keyframes rotate{
+    to{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+}
+}
+@keyframes spincer{
+    from{ transform:scale(0.3) ; -webkit-transform:scale(0.3) ; -moz-transform:scale(0.3) ; -ms-transform:scale(0.3) ; -o-transform:scale(0.3) ; }
+    to{ transform:scale(0.5) ; -webkit-transform:scale(0.5) ; -moz-transform:scale(0.5) ; -ms-transform:scale(0.5) ; -o-transform:scale(0.5) ; }
+}
+@keyframes spincerAfter{
+    from{ transform:scale(1.4) ; -webkit-transform:scale(1.4) ; -moz-transform:scale(1.4) ; -ms-transform:scale(1.4) ; -o-transform:scale(1.4) ; }
+    to{ transform:scale(2) ; -webkit-transform:scale(2) ; -moz-transform:scale(2) ; -ms-transform:scale(2) ; -o-transform:scale(2) ; }
+}
+}
+///searchScope is an animation for wating just throw it in global
+/// dont forget to inset three elements in html:
+/// frst one is an  parent elm with class spincer
+/// second child elem with class spincerAfter 
+/// third grand child span elem
+/// $width is the size 
+/// $offsetColor is the outline color
+/// 
+
+@mixin basicCheckbox($color,$labelFontSize,){
+    .basicCheckbox{
+       appearance: none;
+        +label{
+            font-size: $labelFontSize;
+            text-transform: capitalize;
+            }
+        border: 2px solid $color;
+        width: $labelFontSize ;
+        aspect-ratio: 1/1;
+        &:checked{
+            background-color: $color;
+            +label{
+                color: $color;
+            }
+            box-shadow: 1px 1px 0px #{$labelFontSize / 4} inset white,-1px -1px 0px #{$labelFontSize / 4} inset white;}
+        scale:0.5;
+}}
+///basic checkbox:
+/// choose the display and width for the parent div  of this basic checkbox wisly
+/// and the labele font size as well , just throw it on global dont forget to give the elem basicCheckbox!
+

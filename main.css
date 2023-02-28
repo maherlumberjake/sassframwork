@@ -1,0 +1,787 @@
+*,
+::before,
+::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+body {
+  scroll-behavior: smooth;
+  caret-color: hsl(278, 88%, 52%);
+  font-size: 1rem;
+  font-family: "Trebuchet Ms", "Lucida Sans Unicode", "Sitka", "Segoe Ui";
+  text-transform: capitalize;
+  overflow-x: hidden;
+  accent-color: hsl(278, 88%, 52%);
+}
+body button {
+  outline: none;
+}
+body input[type=reset] {
+  border: none;
+}
+body input[type=submit] {
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo", "Tilt Wrap", "Tahoma";
+}
+
+::-moz-selection {
+  background-color: hsl(278, 88%, 52%);
+  color: white;
+}
+
+::selection {
+  background-color: hsl(278, 88%, 52%);
+  color: white;
+}
+
+::-moz-placeholder {
+  color: #8c8c8c;
+  text-transform: capitalize;
+  font-family: "Trebuchet Ms", "Lucida Sans Unicode", "Sitka", "Segoe Ui";
+}
+
+::placeholder {
+  color: #8c8c8c;
+  text-transform: capitalize;
+  font-family: "Trebuchet Ms", "Lucida Sans Unicode", "Sitka", "Segoe Ui";
+}
+
+table.Main {
+  width: 100%;
+  border-collapse: collapse;
+}
+table.Main td {
+  padding: 0.5em;
+  outline: none;
+  gap: 0px;
+  border-right: 0.2em solid hsl(0, 0%, 45%);
+}
+table.Main tr {
+  color: white;
+}
+
+.arrow {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  background-color: hsl(120, 79%, 51%);
+  -webkit-clip-path: polygon(66.66% 66.66%, 66.66% 90%, 100% 50%, 66.66% 10%, 66.66% 33.33%, 10% 33.33%, 10% 66.66%);
+          clip-path: polygon(66.66% 66.66%, 66.66% 90%, 100% 50%, 66.66% 10%, 66.66% 33.33%, 10% 33.33%, 10% 66.66%);
+}
+
+.btn-primary {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(278, 88%, 52%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-secondary {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(215, 88%, 52%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-success {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(120, 79%, 51%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-danger {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(0, 100%, 57%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-warning {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(57, 88%, 52%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-info {
+  cursor: pointer;
+  font-family: "Viga", "Tahoma";
+  text-align: center;
+  background-color: hsl(220, 88%, 52%);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: capitalize;
+  padding-block: 0.2rem;
+  padding-inline: 0.96rem;
+  border-radius: 0.24rem;
+  -webkit-border-radius: 0.24rem;
+  -moz-border-radius: 0.24rem;
+  -ms-border-radius: 0.24rem;
+  -o-border-radius: 0.24rem;
+  font-size: 1.2rem;
+  transition: 0.6s ease;
+  -webkit-transition: 0.6s ease;
+  -moz-transition: 0.6s ease;
+  -ms-transition: 0.6s ease;
+  -o-transition: 0.6s ease;
+}
+
+.btn-info.scale:hover,
+.btn-warning.scale:hover,
+.btn-danger.scale:hover,
+.btn-success.scale:hover,
+.btn-secondary.scale:hover,
+.btn-primary.scale:hover {
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -ms-transform: scale(1.07);
+  -o-transform: scale(1.07);
+}
+
+.btn-info.opacity:hover,
+.btn-warning.opacity:hover,
+.btn-danger.opacity:hover,
+.btn-success.opacity:hover,
+.btn-secondary.opacity:hover,
+.btn-primary.opacity:hover .btn.opacity:hover {
+  opacity: 0.85;
+}
+
+.oval {
+  border-radius: 100vh;
+  -webkit-border-radius: 100vh;
+  -moz-border-radius: 100vh;
+  -ms-border-radius: 100vh;
+  -o-border-radius: 100vh;
+}
+
+.containerAlpha {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  font-size: 1.2rem;
+  width: 100%;
+  gap: 1.5em;
+  padding: 1em 2em;
+  margin-inline: auto;
+}
+.containerAlpha h3,
+.containerAlpha h4,
+.containerAlpha h5 {
+  font-size: 2.4rem;
+}
+.containerAlpha h3,
+.containerAlpha h4,
+.containerAlpha h5,
+.containerAlpha h6 {
+  text-align: center;
+}
+.containerAlpha .col-1 {
+  grid-column: span 1 !important;
+}
+.containerAlpha .col-2 {
+  grid-column: span 2 !important;
+}
+.containerAlpha .col-3 {
+  grid-column: span 3 !important;
+}
+.containerAlpha .col-4 {
+  grid-column: span 4 !important;
+}
+.containerAlpha .col-5 {
+  grid-column: span 5 !important;
+}
+.containerAlpha .col-6 {
+  grid-column: span 6 !important;
+}
+.containerAlpha .col-7 {
+  grid-column: span 7 !important;
+}
+.containerAlpha .col-8 {
+  grid-column: span 8 !important;
+}
+.containerAlpha .col-9 {
+  grid-column: span 9 !important;
+}
+.containerAlpha .col-10 {
+  grid-column: span 10 !important;
+}
+.containerAlpha .col-11 {
+  grid-column: span 11 !important;
+}
+.containerAlpha .col-12 {
+  grid-column: span 12 !important;
+}
+
+.containerBeta {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 1em 2.5em;
+}
+.containerBeta .col-1 {
+  width: 8.3333333333%;
+}
+.containerBeta .col-2 {
+  width: 16.6666666667%;
+}
+.containerBeta .col-3 {
+  width: 25%;
+}
+.containerBeta .col-4 {
+  width: 33.3333333333%;
+}
+.containerBeta .col-5 {
+  width: 41.6666666667%;
+}
+.containerBeta .col-6 {
+  width: 50%;
+}
+.containerBeta .col-7 {
+  width: 58.3333333333%;
+}
+.containerBeta .col-8 {
+  width: 66.6666666667%;
+}
+.containerBeta .col-9 {
+  width: 75%;
+}
+.containerBeta .col-10 {
+  width: 83.3333333333%;
+}
+.containerBeta .col-11 {
+  width: 91.6666666667%;
+}
+.containerBeta .col-12 {
+  width: 100%;
+}
+
+.width-10 {
+  width: 10%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-70 {
+  width: 70%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.width-90 {
+  width: 90%;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.disaplyed {
+  position: relative;
+  cursor: none;
+}
+.disaplyed::after {
+  z-index: 1;
+  position: absolute;
+  inset: 0px;
+  background-color: rgba(128, 128, 128, 0.266);
+  content: "";
+}
+
+.active {
+  background-color: hsl(278, 88%, 52%) !important;
+  color: white !important;
+}
+
+.toolTip-primary {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-primary::after {
+  z-index: 9999;
+  cursor: help;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(278, 88%, 52%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-primary:hover::after {
+  opacity: 1;
+}
+
+.toolTip-secondary {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-secondary::after {
+  z-index: 9999;
+  cursor: help;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(215, 88%, 52%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-secondary:hover::after {
+  opacity: 1;
+}
+
+.toolTip-success {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-success::after {
+  z-index: 9999;
+  cursor: help;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(120, 79%, 51%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-success:hover::after {
+  opacity: 1;
+}
+
+.toolTip-warning {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-warning::after {
+  z-index: 9999;
+  cursor: help;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(57, 88%, 52%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-warning:hover::after {
+  opacity: 1;
+}
+
+.toolTip-danger {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-danger::after {
+  z-index: 9999;
+  cursor: help;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(0, 100%, 57%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-danger:hover::after {
+  opacity: 1;
+}
+
+.toolTip-info {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.toolTip-info::after {
+  cursor: help;
+  z-index: 9999;
+  font-family: "Viga", "Tahoma";
+  display: block;
+  position: absolute;
+  color: white;
+  padding: 0.25em 0.6em;
+  text-transform: capitalize;
+  left: 110%;
+  width: -moz-max-content;
+  width: max-content;
+  content: attr(data-toolTip);
+  top: 0px;
+  background: hsl(220, 88%, 52%);
+  opacity: 0;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.6s ease opacity;
+  -webkit-transition: 0.6s ease opacity;
+  -moz-transition: 0.6s ease opacity;
+  -ms-transition: 0.6s ease opacity;
+  -o-transition: 0.6s ease opacity;
+}
+.toolTip-info:hover::after {
+  opacity: 1;
+}
+
+.odd {
+  color: white;
+  background-color: hsl(0, 0%, 25%);
+  padding: 0.15em 0.25em;
+}
+
+.even {
+  color: white;
+  background-color: hsl(0, 0%, 35%);
+  padding: 0.15em 0.25em;
+}
+
+.circleBtn {
+  font-size: 2rem;
+  color: white;
+  width: 0.5em;
+  padding: 0.6em;
+  height: 0.5em;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(278, 88%, 52%);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  align-items: center;
+}
+
+input.inputAlpha {
+  outline: none;
+  font-family: "Trebuchet Ms", "Lucida Sans Unicode", "Sitka", "Segoe Ui";
+  border: 1px solid hsl(278, 88%, 52%);
+  width: 100%;
+  height: 1.5em;
+  font-size: 1.1rem;
+  padding: 0.1em 0.3em;
+  display: flex;
+  align-items: center box-shadow;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+}
+input.inputAlpha:focus {
+  box-shadow: 1px 1px 7px 0px hsl(278, 88%, 52%), -1px -1px 7px 0px hsl(278, 88%, 52%);
+}
+
+select {
+  background-color: hsl(0, 0%, 45%);
+  outline: hsl(0, 0%, 25%);
+  padding: 0.2em 0.4em;
+  color: white;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+  transition: 0.4s ease background-color;
+  -webkit-transition: 0.4s ease background-color;
+  -moz-transition: 0.4s ease background-color;
+  -ms-transition: 0.4s ease background-color;
+  -o-transition: 0.4s ease background-color;
+}
+select:focus, select:hover {
+  background-color: hsl(0, 0%, 35%);
+}
+select option {
+  padding: 0.1em 0.2em;
+  color: white;
+  background: hsl(0, 0%, 45%);
+}
+
+input[type=file] {
+  width: 8em;
+}
+input[type=file]::-webkit-file-upload-button {
+  text-align: center;
+  background-color: hsl(0, 0%, 45%);
+  color: white;
+  font-family: "Viga", "Tahoma";
+  text-transform: capitalize;
+  border: 0.1em solid hsl(0, 0%, 35%);
+  width: 100%;
+  padding: 0.2em 0.4em;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  -ms-border-radius: 0.2em;
+  -o-border-radius: 0.2em;
+}
+
+.pushRight {
+  margin-left: auto;
+}
+
+.pushLeft {
+  margin-right: auto;
+}
+
+.pushUp {
+  margin-bottom: auto;
+}
+
+.pushDown {
+  margin-top: auto;
+}
+
+.center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.basicPadding {
+  padding: 0.25em 1em;
+}
+
+@media (max-width: 300px) {
+  :root {
+    font-size: 10px;
+  }
+}
+@media (min-width: 301px) and (max-width: 600px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1000px) {
+  :root {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=main.css.map */
