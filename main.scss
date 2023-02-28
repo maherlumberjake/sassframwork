@@ -1,0 +1,9 @@
+@use "./sass/colors" as *;
+@use "./sass/mixin" as *;
+@use "./sass/globals" as *;
+@use "./sass/builtInUnits" as *;
+@use "./sass/builtInClasses" as *;
+@use "./sass/medias" as *;
+/////////////////////////////////
+$mainColor: $purple;
+$altColor: $lightBlue;
